@@ -16,13 +16,13 @@ Different Cards have different effects
     Q - reverse turn order
     A - draw 4
     2 - draw 2
-```
+
 Game is over when one player is out of cards
 Logic to select which card to play
     Can put down multiple cards if suit or number matches
     Can only play card if suit or value matches
     Can choose to not play and draw from deck
-
+```
 
 ### Milestones
 1. basic terminal interface versus computer
