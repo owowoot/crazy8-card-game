@@ -1,9 +1,14 @@
 # crazy8-card-game
 
 ## Requirements
+```
 A deck of cards
     Suits (clubs, spades, hearts, diamonds), Numbers (2-10), Letters (A, J, Q, K), color (red, black)
-Each player will begin with 8 random cards
+Game components
+    Game start
+        the deck will be shuffled
+        when game starts, every player will be dealt 8 cards from the deck
+
 Different Cards have different effects
     8 - wild card
         must select next suit to play
@@ -11,6 +16,7 @@ Different Cards have different effects
     Q - reverse turn order
     A - draw 4
     2 - draw 2
+```
 Game is over when one player is out of cards
 Logic to select which card to play
     Can put down multiple cards if suit or number matches
