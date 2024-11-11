@@ -1,14 +1,43 @@
+const shuffleDeck = require('./utils')
+class Game {
+    // tracks validity and mechanisms
+    constructor() {
+
+    }
+}
 class Player {
     constructor(name, hand) {
         this.name = name;
         this.hand = hand;
     };
+    playCard() {
+
+    }
+    drawCard() {
+
+    }
 }
 
 class Deck {
-    constructor(cards) {
-        this.cards = cards;
+    constructor() {
+        this.cards = this.generateDeck();
     }
+    generateDeck() {
+        const deck = []
+        for (const suit in CardSuit) {
+            for (const value in CardValue) {
+                deck.push(new Card(value, suit));
+            }
+        }
+        return deck;
+    }
+    shuffleDeck() {
+        for (let i = this.cards.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            [this.cards[i], this.cards[j]] = [this.cards[j], this.cards[i]];
+        };
+    }
+
 }
 
 const CardColor = {
@@ -54,6 +83,12 @@ class Card {
     }
 }
 
-const aceOfSpades = new Card(CardValue.ACE, CardSuit.SPADES)
-console.log(aceOfSpades)
-// module.exports = Card;
+// const aceOfSpades = new Card(CardValue.ACE, CardSuit.SPADES);
+// console.log(aceOfSpades);
+module.default = Card;
+module.default = Deck;
+
+const deckOne = new Deck();
+console.log(deckOne)
+console.log(deckOne.shuffleDeck())
+console.log(deckOne)
